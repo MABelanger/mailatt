@@ -45,10 +45,8 @@ $ mailatt --att='./backup1.zip' --att='./backup2.zip'
 email sent successfully!
 ```
 
-
 ## Upgrade
 
-### Globally
 ```
 $ npm install -g mailatt@latest
 # or
@@ -57,7 +55,6 @@ $ npm install mailatt@latest
 
 ## Unistall
 
-### Globally
 ```
 $ npm uninstall -g mailatt
 # or
