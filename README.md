@@ -51,10 +51,7 @@ email sent successfully!
 ### Globally
 ```
 $ npm install -g mailatt@latest
-```
-
-### Inside a npm package
-```
+# or
 $ npm install mailatt@latest
 ```
 
@@ -63,9 +60,6 @@ $ npm install mailatt@latest
 ### Globally
 ```
 $ npm uninstall -g mailatt
-```
-
-### Inside a npm package
-```
+# or
 $ npm uninstall mailatt
 ```
