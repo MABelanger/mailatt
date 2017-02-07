@@ -11,7 +11,6 @@ let { att:filePaths } = argv( process.argv.slice(2) );
 let { configure } = argv( process.argv.slice(2) );
 
 if(configure){
-  console.log('configure', configure);
   require('./config/questions');
 
 } else if(filePaths){

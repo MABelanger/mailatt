@@ -1,10 +1,10 @@
 {
   "name": "mailatt",
-  "version": "0.0.0-beta.0",
+  "version": "0.0.0-beta.1",
   "description": "Send email attachments",
   "main": "dist/index.js",
   "bin": {
-    "mailatt": "./dist/index.js"
+    "mailatt": "./bin/mailatt"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,7 @@
   ],
   "files": [
     "dist",
+    "bin",
     "README.md"
   ],
   "author": "Michel-Alexandre Belanger <michel.alexandre.belanger@gmail.com> (http://www.mtrema.com/)",
