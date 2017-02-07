@@ -13,9 +13,9 @@ $ npm install -g mailatt
 $ mailatt --version
 ```
 
-### Inside package
+### Inside a npm package
 ```
-$ npm install -g mailatt
+$ npm install mailatt
 $ ./node_modules/.bin/mailatt --version
 ```
 
