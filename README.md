@@ -44,3 +44,28 @@ When the configuration is complete, this package uses an email template with att
 $ mailatt --att='./backup1.zip' --att='./backup2.zip'
 email sent successfully!
 ```
+
+
+## Upgrade
+npm install npm@latest -g
+### Globally
+```
+$ npm install -g mailatt@latest
+```
+
+### Inside a npm package
+```
+$ npm install mailatt@latest
+```
+
+## Unistall
+
+### Globally
+```
+$ npm uninstall -g mailatt
+```
+
+### Inside a npm package
+```
+$ npm uninstall mailatt
+```
