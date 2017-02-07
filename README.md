@@ -4,6 +4,9 @@ The first objective of this package comes from the need to get a daily backup of
 
 At this point with this package, you must transpile into ES5. So, to use it, fallow the 3 steps.
 
+## Requirement
+Node.js v6+
+
 ## 1. install and build
 ```
 $ npm install && npm run build
