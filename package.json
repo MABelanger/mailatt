@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/MABelanger/mailatt#readme",
   "scripts": {
-    "build": "babel --out-dir dist src/lib",
+    "build": "babel --copy-files --out-dir dist src/lib",
     "test": "mocha src/lib/*.test.js --compilers js:babel-register"
   },
   "devDependencies": {

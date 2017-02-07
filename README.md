@@ -6,7 +6,7 @@ At this point with this package, you must transpile into ES5. So, to use it, fal
 
 ## 1. build
 ```
-$ npm run build
+$ npm install && npm run build
 ```
 
 ## 2. Configuration
@@ -23,6 +23,7 @@ $ node dist/index.js --configure
 ? from:       from@example.com
 ? subject:    daily backup
 ? html:       <h1>My Backup</h1>
+The file was saved!
 ```
 
 ## 3. Send attachments
