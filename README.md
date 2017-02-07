@@ -47,7 +47,7 @@ email sent successfully!
 
 
 ## Upgrade
-npm install npm@latest -g
+
 ### Globally
 ```
 $ npm install -g mailatt@latest
