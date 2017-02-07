@@ -1,6 +1,6 @@
 # mailatt
 
-The first objective of this package comes from the need to get a daily backup of my email with attachments. Let's say you need to back up a database every day and send a compressed file to the same email, several times as a cron job.
+The first objective of this package comes from the need to get a daily backup of my email with attachments. Let's say you need to back up a database every day and send a compressed file to the same email, several times a week as a cron job.
 
 At this point with this package, you must transpile into ES5. So, to use it, fallow the 3 steps.
 
