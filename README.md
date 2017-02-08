@@ -22,12 +22,14 @@ $ ./node_modules/.bin/mailatt --version
 ## 2. Configuration
 To use this command, you need an `SMTP host` transport with the `username` and `password` that you can configure with the `--configure` parameter.
 
-You will be prompted to enter the configuration. At the same time, will be asked to enter :
-- <b>SMTP host:</b> The SMTP host
+You will be prompted to enter the configuration :
+- <b>SMTP host:</b> The SMTP server address
+- <b>username:</b> The SMTP user name
+- <b>password:</b> The SMTP password
 - <b>to:</b> The email of the recipient
 - <b>from:</b> The email of the sender
 - <b>subject:</b> The subject of the email
-- <b>html:</b> The body text in html format 
+- <b>html:</b> The body text in html format
 
 Example:
 
