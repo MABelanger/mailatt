@@ -20,7 +20,7 @@ $ ./node_modules/.bin/mailatt --version
 ```
 
 ## 2. Configuration
-To use this command, you need an `SMTP host` transport with the `username` and `password` that you can configure with the `--configure` parameter.
+To use this command, you need an `SMTP address` transport with the `username` and `password` that you can configure with the `--configure` parameter.
 
 You will be prompted to enter the configuration :
 
@@ -30,6 +30,7 @@ Question | Description
 **username:** | The SMTP user name
 **password:** | The SMTP password
 **to:** | The email of the recipient
+**reply To:** | The email to reply
 **from:** | The email of the sender
 **subject:** | The subject of the email
 **html:** | The body text in html format
