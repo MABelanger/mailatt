@@ -1,6 +1,6 @@
 {
   "name": "mailatt",
-  "version": "0.0.0-beta.6",
+  "version": "0.0.0-beta.7",
   "description": "Send email attachments",
   "main": "dist/index.js",
   "bin": {
