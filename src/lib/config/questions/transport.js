@@ -21,23 +21,25 @@ let questions = [
   {
     type: 'input',
     name: 'host',
-    message: 'What\'s your smtp host:'
+    message: 'SMTP host:'
   },
   {
     type: 'input',
     name: 'user',
-    message: 'What\'s your username:'
+    message: 'username:'
   },
   {
     type: 'input',
     name: 'pass',
-    message: 'What\'s your password:'
+    message: 'password:'
   }
 ];
 
 function writeTransport(transport) {
-  let transportJson = JSON.stringify(transport, null, '  ')
-  fs.writeFile("./dist/config/answers/transport.json", transportJson, function(err) {
+  let transportJson = JSON.stringify(transport, null, '  ');
+  let path = __dirname + "/../answers/transport.json";
+
+  fs.writeFile(path, transportJson, function(err) {
     if(err) {
       return console.log(err);
     }

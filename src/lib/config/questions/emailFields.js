@@ -41,7 +41,9 @@ let questions = [
 
 function writeTransport(emailFields) {
   let emailFieldsJson = JSON.stringify(emailFields, null, '  ')
-  fs.writeFile("./dist/config/answers/email_fields.json", emailFieldsJson, function(err) {
+  let path = __dirname + "/../answers/email_fields.json";
+
+  fs.writeFile(path, emailFieldsJson, function(err) {
     if(err) {
       return console.log(err);
     }
