@@ -25,13 +25,13 @@ To use this command, you need an `SMTP host` transport with the `username` and `
 You will be prompted to enter the configuration :
 | Question | Description |
 | --- | --- |
-|<b>SMTP address:</b> | The SMTP server address
-|<b>username:</b> | The SMTP user name
-|<b>password:</b> | The SMTP password
-|<b>to:</b> | The email of the recipient
-|<b>from:</b> | The email of the sender
-|<b>subject:</b> | The subject of the email
-|<b>html:</b> | The body text in html format
+| **SMTP address:** | The SMTP server address
+| **username:** | The SMTP user name
+| **password:** | The SMTP password
+| **to:** | The email of the recipient
+| **from:** | The email of the sender
+| **subject:** | The subject of the email
+| **html:** | The body text in html format
 
 Example:
 
