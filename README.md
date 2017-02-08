@@ -23,15 +23,16 @@ $ ./node_modules/.bin/mailatt --version
 To use this command, you need an `SMTP host` transport with the `username` and `password` that you can configure with the `--configure` parameter.
 
 You will be prompted to enter the configuration :
- Question | Description
- --- | ---
- **SMTP address:** | The SMTP server address
- **username:** | The SMTP user name
- **password:** | The SMTP password
- **to:** | The email of the recipient
- **from:** | The email of the sender
- **subject:** | The subject of the email
- **html:** | The body text in html format
+
+Question | Description
+--- | ---
+**SMTP address:** | The SMTP server address
+**username:** | The SMTP user name
+**password:** | The SMTP password
+**to:** | The email of the recipient
+**from:** | The email of the sender
+**subject:** | The subject of the email
+**html:** | The body text in html format
 
 Example:
 
