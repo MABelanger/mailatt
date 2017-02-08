@@ -18,7 +18,7 @@ function printHelp() {
 
       --configure          configure the transport and the email fields
       --version            output the version number
-      --att='filePath'     the path of the file attachement
+      --att='filePath'     the path of the file attachment
   `);
 }
 

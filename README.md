@@ -1,6 +1,6 @@
 # mailatt
 
-The first objective of this package comes from the need to get a daily backup of my email with attachments. Let's say you need to back up a database every day and send a compressed file to the same email, several times a week as a cron job.
+The first objective of this package comes from the need to get a daily backup to my email with attachments. Let's say you need to back up a database every day and send a compressed file to the same email, several times a week as a cron job.
 
 ## Requirement
 Node.js v6+
@@ -20,7 +20,16 @@ $ ./node_modules/.bin/mailatt --version
 ```
 
 ## 2. Configuration
-To use this command, you need an `SMTP url` transport with the` username` and `password`, that you can enter with the `--configure` parameter. You will be prompted to enter the configuration. Example:
+To use this command, you need an `SMTP host` transport with the `username` and `password` that you can configure with the `--configure` parameter.
+
+You will be prompted to enter the configuration. At the same time, will be asked to enter :
+- <b>SMTP host:</b> The SMTP host
+- <b>to:</b> The email of the recipient
+- <b>from:</b> The email of the sender
+- <b>subject:</b> The subject of the email
+- <b>html:</b> The body text in html format 
+
+Example:
 
 ```
 $ mailatt --configure
@@ -33,7 +42,7 @@ $ mailatt --configure
 ? from:       from@example.com
 ? subject:    daily backup
 ? html:       <h1>My Backup</h1>
-The file was saved!
+The configuration was saved!
 ```
 
 ## 3. Send attachments
@@ -43,6 +52,17 @@ When the configuration is complete, this package uses an email template with att
 ```
 $ mailatt --att='./backup1.zip' --att='./backup2.zip'
 email sent successfully!
+```
+
+## API
+```
+Usage: mailatt [options]
+
+Options:
+
+  --configure          configure the transport and the email fields
+  --version            output the version number
+  --att='filePath'     the path of the file attachment
 ```
 
 ## Upgrade
