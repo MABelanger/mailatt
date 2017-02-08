@@ -1,3 +1,5 @@
 https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#tables
 https://tools.ietf.org/rfc/rfc821.txt
 https://github.com/tj/commander.js
+http://tutorialzine.com/2014/09/creating-your-first-node-js-command-line-application/
+http://justjs.com/posts/npm-link-developing-your-own-npm-modules-without-tears
