@@ -21,7 +21,7 @@ let questions = [
   {
     type: 'input',
     name: 'host',
-    message: 'SMTP host:'
+    message: 'SMTP address:'
   },
   {
     type: 'input',
