@@ -16,4 +16,4 @@ Please do the following:
 5. push your changes
 6. create a PR with a link to the original issue
 
-Thank you for your interest !
+That's it! Thank you for your contribution!
