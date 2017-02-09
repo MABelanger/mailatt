@@ -35,7 +35,7 @@
     "test": "mocha src/lib/*.test.js --compilers js:babel-register",
     "test:watch": "npm t -- -w",
     "eslint:src": "eslint --ignore-pattern !**/*.{test,mock}.js src/",
-    "eslint:watch": "esw -w"
+    "eslint:watch": "esw --color --ignore-pattern !**/*.{test,mock}.js src/ -w"
   },
   "devDependencies": {
     "babel-cli": "^6.22.2",
