@@ -1,6 +1,6 @@
 {
   "name": "mailatt",
-  "version": "0.0.0-beta.7",
+  "version": "0.0.0-beta.8",
   "description": "Send email attachments",
   "main": "dist/index.js",
   "bin": {
@@ -27,8 +27,13 @@
   },
   "homepage": "https://github.com/MABelanger/mailatt#readme",
   "scripts": {
+    "start": "npm run test:watch",
+    "check-coverage": "nyc check-coverage",
+    "cover": "nyc npm t",
+    "prebuild": "rimraf dist",
     "build": "babel --copy-files --out-dir dist src/lib",
-    "test": "mocha src/lib/*.test.js --compilers js:babel-register"
+    "test": "mocha src/lib/*.test.js --compilers js:babel-register",
+    "test:watch": "npm t -- -w"
   },
   "devDependencies": {
     "babel-cli": "^6.22.2",
@@ -40,6 +45,8 @@
     "json-loader": "^0.5.4",
     "mocha": "^3.2.0",
     "npm-run-all": "^4.0.1",
+    "nyc": "10.1.2",
+    "rimraf": "2.5.4",
     "webpack": "^2.2.1"
   },
   "dependencies": {
