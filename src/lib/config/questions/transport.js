@@ -5,7 +5,7 @@ import inquirer from 'inquirer';
 import {writeConf} from './utils';
 import {askQuestions as askQuestionsFields} from './fields';
 
-const TRANSPORT_JSON_PATH = __dirname + '/../answers/transport.json';
+const TRANSPORT_JSON_PATH = __dirname.concat('/../answers/transport.json');
 const QUESTIONS = [
   {
     type: 'input',

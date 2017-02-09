@@ -5,7 +5,7 @@ import {writeConf} from './utils';
 
 // __dirname point to the current directory 'questions'
 // So we go to the parent before '..' to get the path 'answers'
-const FIELDS_JSON_PATH = __dirname + '/../answers/fields.json';
+const FIELDS_JSON_PATH = __dirname.concat('/../answers/fields.json');
 
 const QUESTIONS = [
   {
