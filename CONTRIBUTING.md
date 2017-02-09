@@ -16,4 +16,3 @@ Please do the following:
 3. write your code in ES6
 7. push your changes
 8. create a PR with a link to the original issue
-9. wait patiently :-)
