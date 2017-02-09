@@ -5,8 +5,8 @@
  * and Return a fields object with all parameter that nodemailer need to send
  * the email : 'from', 'to', 'replyTo', 'subject', 'html' and 'attachment'
  * @public
- * @param  {Object} emailFields Object with all the email fields that come from the config
- * @param  {Array}  attachments Array of String of the attachments path.
+ * @param  {Object} emailFields Object literal with all the email fields that come from the config.
+ * @param  {Array}  attachments Array of Strings that contain a list of attachments path.
  * @return {Object}             Object literal build from 'emailFields' and 'attachments'
  * that contain all parameters need by nodemailer to send the email.
  */
