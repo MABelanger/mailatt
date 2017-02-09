@@ -1,0 +1,7 @@
+Atom has a built-in tool for this
+
+Activate the command palette (ShiftCmdP on Mac, CtrlShiftP on Windows/Linux) and search for "convert space" or "convert tab". You should find these two commands are available:
+
+Whitespace: Convert Spaces to Tabs
+Whitespace: Convert Tabs to Spaces
+Whitespace: Convert All Tabs to Spaces

@@ -1,12 +1,11 @@
-"use strict";
+'use strict';
 
-import inquirer             from 'inquirer';
-import {writeConf}          from './utils';
-
+import inquirer from 'inquirer';
+import {writeConf} from './utils';
 
 // __dirname point to the current directory 'questions'
 // So we go to the parent before '..' to get the path 'answers'
-const FIELDS_JSON_PATH = __dirname + "/../answers/fields.json";
+const FIELDS_JSON_PATH = __dirname + '/../answers/fields.json';
 
 const QUESTIONS = [
   {
@@ -36,7 +35,6 @@ const QUESTIONS = [
   }
 ];
 
-
 /**
  * getFieldsConf - description
  *
@@ -44,10 +42,9 @@ const QUESTIONS = [
  * @param  {type} answers description
  * @return {type}         description
  */
-function getFieldsConf(answers) {
+function getFieldsConf (answers) {
   return answers;
 }
-
 
 /**
  * askQuestions - description
@@ -55,12 +52,12 @@ function getFieldsConf(answers) {
  * @public
  * @return {type}  description
  */
-function askQuestions() {
+function askQuestions () {
   inquirer.prompt(QUESTIONS)
-    .then( function (answers) {
+    .then(function (answers) {
       let fieldsConf = getFieldsConf(answers);
-      writeConf(fieldsConf, FIELDS_JSON_PATH, function cb(){
-        console.log('The configuration was saved!')
+      writeConf(fieldsConf, FIELDS_JSON_PATH, function cb () {
+        console.log('The configuration was saved!');
       });
     });
 }

@@ -5,7 +5,7 @@ function getFileName (filePath) {
 }
 
 function isOneArg (args) {
-  return (typeof args === 'string' || args instanceof String)
+  return (typeof args === 'string' || args instanceof String);
 }
 
 function isManyArg (args) {
@@ -16,15 +16,15 @@ function getAttachmentObj (filePath) {
   return {
     filename: getFileName(filePath),
     path: filePath
-  }
+  };
 }
 
 function getAttachment (filePaths) {
-  if ( isOneArg(filePaths) ) {
+  if (isOneArg(filePaths)) {
     let filePath = filePaths;
     return [ getAttachmentObj(filePath) ];
-  } else if (isManyArg(filePaths) ) {
-    return filePaths.map( filePath => {
+  } else if (isManyArg(filePaths)) {
+    return filePaths.map(filePath => {
       return getAttachmentObj(filePath);
     });
   }

@@ -1,11 +1,11 @@
-"use strict";
+'use strict';
 
-import inquirer                               from 'inquirer';
+import inquirer from 'inquirer';
 
-import {writeConf}                            from './utils';
-import {askQuestions as askQuestionsFields}   from './fields';
+import {writeConf} from './utils';
+import {askQuestions as askQuestionsFields} from './fields';
 
-const TRANSPORT_JSON_PATH = __dirname + "/../answers/transport.json";
+const TRANSPORT_JSON_PATH = __dirname + '/../answers/transport.json';
 const QUESTIONS = [
   {
     type: 'input',
@@ -31,7 +31,7 @@ const QUESTIONS = [
  * @param  {type} answers description
  * @return {type}         description
  */
-function getTransportConf(answers) {
+function getTransportConf (answers) {
   return {
     host: answers.host,
     secureConnection: false, // TLS requires secureConnection to be false
@@ -41,12 +41,11 @@ function getTransportConf(answers) {
       pass: answers.pass
     },
     tls: {
-      ciphers:'SSLv3'
+      ciphers: 'SSLv3'
     },
     debug: true
   };
 }
-
 
 /**
  * askQuestions - description
@@ -54,13 +53,13 @@ function getTransportConf(answers) {
  * @param  {type} cb description
  * @return {type}    description
  */
-function askQuestions(cb) {
+function askQuestions (cb) {
   inquirer.prompt(QUESTIONS)
-    .then( function (answers) {
+    .then(function (answers) {
       let transportConf = getTransportConf(answers);
-      //console.log('utils', utils)
-      //console.log('writeConf', writeConf)
-      writeConf(transportConf, TRANSPORT_JSON_PATH, function cb() {
+      // console.log('utils', utils)
+      // console.log('writeConf', writeConf)
+      writeConf(transportConf, TRANSPORT_JSON_PATH, function cb () {
         // kick off the questions of email Fields
         askQuestionsFields();
       });
