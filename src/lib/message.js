@@ -1,13 +1,14 @@
 "use strict";
 
 /**
- * _getSendMailMessage -
- *
- * @private
- * @param  {Object} emailFields     description
- * @param  {Object} attachments     description
- * @return {Object}         Return an object with all parameter :
- * 'from', 'to', 'replyTo', 'subject', 'html' and 'attachment'
+ * getFields - Merge two object 'emailFields' and 'attachments'
+ * and Return a fields object with all parameter that nodemailer need to send
+ * the email : 'from', 'to', 'replyTo', 'subject', 'html' and 'attachment'
+ * @public
+ * @param  {Object} emailFields Object with all the email fields that come from the config
+ * @param  {Array}  attachments Array of String of the attachments path.
+ * @return {Object}             Object literal build from 'emailFields' and 'attachments'
+ * that contain all parameters need by nodemailer to send the email.
  */
 function getFields(emailFields, attachments){
   return {
