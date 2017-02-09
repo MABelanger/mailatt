@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 /**
  * getFields - Merge two object 'emailFields' and 'attachments'
@@ -10,10 +10,10 @@
  * @return {Object}             Object literal build from 'emailFields' and 'attachments'
  * that contain all parameters need by nodemailer to send the email.
  */
-function getFields(fieldsConf, attachments){
+function getFields (fieldsConf, attachments) {
   return {
     // sender info
-    'from':  fieldsConf.from,
+    'from': fieldsConf.from,
     // Comma separated list of recipients
     'to': '"Receiver Name" <' + fieldsConf.to + '>',
     'replyTo': fieldsConf.reply_to,
@@ -27,5 +27,5 @@ function getFields(fieldsConf, attachments){
 }
 
 module.exports = {
-	getFields: getFields
+  getFields: getFields
 };

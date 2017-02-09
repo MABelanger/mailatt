@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 import nodemailer           from 'nodemailer';
 import smtpTransport        from 'nodemailer-smtp-transport';
 
