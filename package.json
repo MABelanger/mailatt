@@ -32,7 +32,7 @@
     "cover": "nyc npm t",
     "prebuild": "rimraf dist",
     "build": "babel --copy-files --out-dir dist src/lib",
-    "test": "mocha src/lib/*.test.js --compilers js:babel-register",
+    "test": "mocha test/*.test.js --compilers js:babel-register",
     "test:watch": "npm t -- -w",
     "eslint:src": "eslint --ignore-pattern !**/*.{test,mock}.js src/",
     "eslint:watch": "esw --color --ignore-pattern !**/*.{test,mock}.js src/ -w"

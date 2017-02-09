@@ -1,7 +1,7 @@
 'use strict';
 
 import {expect} 					from 'chai';
-import attachment 				from './attachment';
+import attachment 				from '../src/lib/attachment';
 
 function isAttachment (attachment) {
   return (
