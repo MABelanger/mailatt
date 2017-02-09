@@ -1,11 +1,12 @@
 "use strict";
-import argv                       from 'minimist';
+import argv                            from 'minimist';
 
-import {askQuestions as askTransport}       from './config/questions/transport';
-import {askQuestions as askFields}       from './config/questions/fields';
-import attachment                 from './attachment'
-import mail                       from './mail';
-import message                    from './message';
+import {askQuestions as askTransport}  from './config/questions/transport';
+import {askQuestions as askFields}     from './config/questions/fields';
+import attachment                      from './attachment'
+import mail                            from './mail';
+import message                         from './message';
+import {transportConf, fieldsConf}     from './config/answers';
 
 function printVersion() {
   console.log('0.0.0-beta');
@@ -31,9 +32,9 @@ function startConfigure() {
 
 function sendMail(filePaths) {
   let attachments = attachment.getAttachment(filePaths);
-  let message = message.getFields(answers.fieldsConf, attachments);
+  let messageObj = message.getFields(fieldsConf, attachments);
 
-  mail.send(answers.transportConf, message, function(error){
+  mail.send(transportConf, messageObj, function(error){
     if(error){
       console.log('error', error);
     } else {

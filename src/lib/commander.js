@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * Module dependencies.
+ * TODO: use commander
  */
 
 var program = require('commander');
