@@ -1,9 +1,9 @@
 "use strict";
 
-import {transport}    from './answers';
-import {emailFields}  from './answers';
+import answers    from './answers';
+import questions  from './questions';
 
 export {
-  transport,
-  emailFields
+  answers,
+  questions
 };

@@ -1,23 +1,12 @@
 "use strict";
 
-import inquirer             from 'inquirer';
-import fs                   from 'fs';
+import inquirer                               from 'inquirer';
 
-let transport = {
-  host: null,
-  secureConnection: false, // TLS requires secureConnection to be false
-  port: 587,
-  auth: {
-    user: null,
-    pass: null
-  },
-  tls: {
-    ciphers:'SSLv3'
-  },
-  debug: true
-};
+import {writeConf}                            from './utils';
+import {askQuestions as askQuestionsFields}   from './fields';
 
-let questions = [
+const TRANSPORT_JSON_PATH = __dirname + "/../answers/transport.json";
+const QUESTIONS = [
   {
     type: 'input',
     name: 'host',
@@ -35,22 +24,49 @@ let questions = [
   }
 ];
 
-function writeTransport(transport) {
-  let transportJson = JSON.stringify(transport, null, '  ');
-  let path = __dirname + "/../answers/transport.json";
-
-  fs.writeFile(path, transportJson, function(err) {
-    if(err) {
-      return console.log(err);
-    }
-    require('./emailFields'); // TODO :. alternative
-  });
+/**
+ * getTransportConf - description
+ *
+ * @private
+ * @param  {type} answers description
+ * @return {type}         description
+ */
+function getTransportConf(answers) {
+  return {
+    host: answers.host,
+    secureConnection: false, // TLS requires secureConnection to be false
+    port: 587,
+    auth: {
+      user: answers.user,
+      pass: answers.pass
+    },
+    tls: {
+      ciphers:'SSLv3'
+    },
+    debug: true
+  };
 }
-inquirer.prompt(questions)
-  .then( function (answers) {
-    transport.host = answers.host;
-    transport.auth.user = answers.user;
-    transport.auth.pass = answers.pass;
 
-    writeTransport(transport);
-  });
+
+/**
+ * askQuestions - description
+ *
+ * @param  {type} cb description
+ * @return {type}    description
+ */
+function askQuestions(cb) {
+  inquirer.prompt(QUESTIONS)
+    .then( function (answers) {
+      let transportConf = getTransportConf(answers);
+      //console.log('utils', utils)
+      //console.log('writeConf', writeConf)
+      writeConf(transportConf, TRANSPORT_JSON_PATH, function cb() {
+        // kick off the questions of email Fields
+        askQuestionsFields();
+      });
+    });
+}
+
+export {
+  askQuestions
+};

@@ -1,5 +1,9 @@
-"use strict";
+'use strict';
 
-// execute all questions
-import transport    from './transport';
-// import emailFields  from './emailFields';
+import fields      from './fields';
+import transport   from './transport';
+
+export {
+ fields,
+ transport
+};

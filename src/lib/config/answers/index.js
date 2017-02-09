@@ -1,7 +1,7 @@
-import transport    from './transport.json';
-import emailFields  from './email_fields.json';
+import transportConf    from './transport.json';
+import fieldsConf       from './fields.json';
 
 export {
- transport,
- emailFields
+ transportConf,
+ fieldsConf
 };

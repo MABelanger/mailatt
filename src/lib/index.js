@@ -1,10 +1,11 @@
 "use strict";
-import argv                 from 'minimist';
+import argv                       from 'minimist';
 
-import {emailFields}        from './config';
-import {transport}          from './config';
-import attachment           from './attachment'
-import mail                 from './mail';
+import {askQuestions as askTransport}       from './config/questions/transport';
+import {askQuestions as askFields}       from './config/questions/fields';
+import attachment                 from './attachment'
+import mail                       from './mail';
+import message                    from './message';
 
 function printVersion() {
   console.log('0.0.0-beta');
@@ -23,13 +24,16 @@ function printHelp() {
 }
 
 function startConfigure() {
-  require('./config/questions');
+  askTransport(function(){
+    askFields();
+  });
 }
 
 function sendMail(filePaths) {
   let attachments = attachment.getAttachment(filePaths);
+  let message = message.getFields(answers.fieldsConf, attachments);
 
-  mail.send(transport, emailFields, attachments, function(error){
+  mail.send(answers.transportConf, message, function(error){
     if(error){
       console.log('error', error);
     } else {
@@ -39,10 +43,7 @@ function sendMail(filePaths) {
 }
 
 // the parameters of the cli
-let { version } = argv( process.argv.slice(2) );
-let { configure } = argv( process.argv.slice(2) );
-let { att:filePaths } = argv( process.argv.slice(2) );
-
+let { version, configure, att:filePaths } = argv( process.argv.slice(2) );
 
 if(version){
   printVersion();

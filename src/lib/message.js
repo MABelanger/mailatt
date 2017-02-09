@@ -10,17 +10,18 @@
  * @return {Object}             Object literal build from 'emailFields' and 'attachments'
  * that contain all parameters need by nodemailer to send the email.
  */
-function getFields(emailFields, attachments){
+function getFields(fieldsConf, attachments){
   return {
     // sender info
-    'from':  emailFields.FROM,
+    'from':  fieldsConf.from,
     // Comma separated list of recipients
-    'to': '"Receiver Name" <' + emailFields.TO + '>',
-    'replyTo': emailFields.REPLY_TO,
+    'to': '"Receiver Name" <' + fieldsConf.to + '>',
+    'replyTo': fieldsConf.reply_to,
     // Subject of the message
-    'subject': emailFields.SUBJECT,
+    'subject': fieldsConf.subject,
     // HTML body
-    'html': emailFields.HTML,
+    'html': fieldsConf.html,
+    // all the attachements
     'attachments': attachments
   };
 }
