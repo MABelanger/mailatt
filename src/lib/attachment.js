@@ -20,16 +20,9 @@ function getAttachmentObj (filePath) {
 }
 
 function getAttachment (filePaths) {
-  if (isOneArg(filePaths)) {
-    let filePath = filePaths;
-    return [ getAttachmentObj(filePath) ];
-  } else if (isManyArg(filePaths)) {
-    return filePaths.map(filePath => {
-      return getAttachmentObj(filePath);
-    });
-  }
-  // no filePaths
-  return [];
+  return filePaths.map(filePath => {
+    return getAttachmentObj(filePath);
+  });
 }
 
 module.exports = {

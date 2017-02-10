@@ -49,13 +49,19 @@ function sendMail (filePaths) {
 
 let { version, configure, att: filePaths } = minimist(argCmd);
 
+// minimist return a string not an array if it only one argument '--att' is used
+// so we make shure that filePaths is an array.
+if (typeof filePaths === 'string' || filePaths instanceof String) {
+  filePaths = [ filePaths ];
+}
+
 if (version) {
   printVersion();
 } else if (configure) {
   startConfigure();
 } else if (filePaths) { // compatible with the old --att='./path/file.ext'
   sendMail(filePaths);
-} else if (argCmd.length > 0) { // if argument exist without options, it's a file
+} else if (argCmd.length > 0) { // if argument exist without options, it's a path of file
   filePaths = argCmd;
   sendMail(filePaths);
 } else { // if wrong usage, print the help
