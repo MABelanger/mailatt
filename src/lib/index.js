@@ -55,7 +55,7 @@ if (version) {
   startConfigure();
 } else if (filePaths) { // compatible with the old --att='./path/file.ext'
   sendMail(filePaths);
-} else if (argCmd.length > 0) { // if argument exist without parameter, it's a file
+} else if (argCmd.length > 0) { // if argument exist without options, it's a file
   filePaths = argCmd;
   sendMail(filePaths);
 } else { // if wrong usage, print the help
