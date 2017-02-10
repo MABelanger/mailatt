@@ -59,6 +59,12 @@ $ mailatt ./backup1.zip ./backup2.zip
 email sent successfully!
 ```
 
+Note that you can use wildcard character `*` as operands to send attachments that correspond to the pattern matching. Example:
+```
+$ mailatt *.zip
+email sent successfully!
+```
+
 ## API
 ```
 Usage: mailatt [options] [file ...]
