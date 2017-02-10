@@ -5,3 +5,17 @@ Activate the command palette (ShiftCmdP on Mac, CtrlShiftP on Windows/Linux) and
 Whitespace: Convert Spaces to Tabs
 Whitespace: Convert Tabs to Spaces
 Whitespace: Convert All Tabs to Spaces
+
+
+regex: email
+/^[^@\s]+@[^@\s]+$/
+no char after @ : 
+((\w*)@([a-zA-Z0-9]*\.)*([a-zA-Z0-9]*))
+
+
+regex : file windows
+^(?:[\w]\:|\\)(\\[a-z_\-\s0-9\.]+)+\.(txt|gif|pdf|doc|docx|xls|xlsx)$
+
+
+url pattern:
+(?:(?:https?|ftp|file):\/\/|www\.|ftp\.)(?:\([-A-Z0-9+&@#\/%=~_|$?!:,.]*\)|[-A-Z0-9+&@#\/%=~_|$?!:,.])*(?:\([-A-Z0-9+&@#\/%=~_|$?!:,.]*\)|[A-Z0-9+&@#\/%=~_|$])

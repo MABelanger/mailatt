@@ -52,23 +52,21 @@ The configuration was saved!
 ```
 
 ## 3. Send attachments
-When the configuration is complete, this package uses an email template with attachments specified with the argument
-`--att`. You can send multiple attachments by adding `--att` multiples times. If the email is sent successfully, you will receive a confirmation message. `email sent successfully!` If not, you will get an error why. Example:
+When the configuration is complete, this package uses an email template with attachments specified his operands. You can send multiple attachments by adding multiples paths separate by space. If the email is sent successfully, you will receive a confirmation message. `email sent successfully!` If not, you will get an error why. Example:
 
 ```
-$ mailatt --att='./backup1.zip' --att='./backup2.zip'
+$ mailatt ./backup1.zip ./backup2.zip
 email sent successfully!
 ```
 
 ## API
 ```
-Usage: mailatt [options]
+Usage: mailatt [options] [file ...]
 
 Options:
 
   --configure          configure the transport and the email fields
   --version            output the version number
-  --att='filePath'     the path of the file attachment
 ```
 
 ## Upgrade

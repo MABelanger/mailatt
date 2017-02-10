@@ -8,3 +8,6 @@ http://justjs.com/posts/npm-link-developing-your-own-npm-modules-without-tears
 Eslint:
 http://www.zsoltnagy.eu/use-eslint-like-a-pro-with-es6-and-react/
 http://eslint.org/docs/developer-guide/shareable-configs
+
+path module:
+https://nodejs.org/docs/latest/api/path.html
