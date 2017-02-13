@@ -89,19 +89,19 @@ $ npm install mailatt@latest
     1. <b>transport.json</b>: That contain your `username` and `password` with the `SMTP address`.
     2. <b>fields.json</b>: That contain the information about the email fields `to:`, `subject:` ect...
   * The location of the configurations json files can be in two different place:
-      - If you have installed the module into a npm package (no global):
-         - `./node_modules/mailatt/dist/config/answers/`
-      - If you have installed the package globally with `-g` and let say you use nvm with node version 6.9.5:
-         - ` ~/.nvm/versions/node/v6.9.5/lib/node_modules/mailatt/dist/config/answers/`
+    - If you have installed the module into a npm package (no global):
+      - `./node_modules/mailatt/dist/config/answers/`
+    - If you have installed the package globally with `-g` and let say you use nvm with node version 6.9.5:
+      - ` ~/.nvm/versions/node/v6.9.5/lib/node_modules/mailatt/dist/config/answers/`
 
 2. <b>Does my `username` and `password` is encrypted?</b>
-     No, in the next version it will :)
+  * No, in the next version it will :)
 
 3. <b>If i uninstall the package does my configuration files is removed to?</b>
-     Yes!
+  * Yes!
 
 3. <b>What if i want to improve the code or add functionalities?</b>
-     Please take a look into the [CONTRIBUTING.md](CONTRIBUTING.md)
+  * Please take a look into the [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## Unistall
 
