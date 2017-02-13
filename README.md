@@ -95,13 +95,13 @@ $ npm install mailatt@latest
          - ` ~/.nvm/versions/node/v6.9.5/lib/node_modules/mailatt/dist/config/answers/`
 
 2. <b>Does my `username` and `password` is encrypted?</b>
-   No, in the next version it will :)
+     No, in the next version it will :)
 
 3. <b>If i uninstall the package does my configuration files is removed to?</b>
-   Yes!
+     Yes!
 
 3. <b>What if i want to improve the code or add functionalities?</b>
-   Please take a look into the [CONTRIBUTING.md](CONTRIBUTING.md)
+     Please take a look into the [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## Unistall
 
