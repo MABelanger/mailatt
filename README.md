@@ -83,7 +83,7 @@ $ npm install -g mailatt@latest
 $ npm install mailatt@latest
 ```
 
-## Unistall
+## Clean uninstall
 
 ```
 $ npm uninstall -g mailatt
