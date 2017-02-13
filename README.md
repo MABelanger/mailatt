@@ -96,7 +96,7 @@ $ npm uninstall mailatt
   * The configuration is split into two json files:
     1. <b>transport.json</b>: That contain your `username` and `password` with the `SMTP address`.
     2. <b>fields.json</b>: That contain the information about the email fields `to:`, `subject:` ect...
-  * The location of the configurations json files can be in two different place:
+  * The location of the configurations json files can be in two different places:
     - If you have installed the module into a npm package (no global):
       - `./node_modules/mailatt/dist/config/answers/`
     - If you have installed the package globally with `-g` and let say you use nvm with node version 6.9.5:
