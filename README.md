@@ -83,6 +83,14 @@ $ npm install -g mailatt@latest
 $ npm install mailatt@latest
 ```
 
+## Unistall
+
+```
+$ npm uninstall -g mailatt
+# or
+$ npm uninstall mailatt
+```
+
 ## FAQ
 1. <b>Where my configurations is saved?</b>
   * The configuration is split into two json files:
@@ -102,11 +110,3 @@ $ npm install mailatt@latest
 
 3. <b>What if i want to improve the code or add functionalities?</b>
   * Please take a look into the [CONTRIBUTING.md](CONTRIBUTING.md)
-
-## Unistall
-
-```
-$ npm uninstall -g mailatt
-# or
-$ npm uninstall mailatt
-```
